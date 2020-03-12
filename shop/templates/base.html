@@ -1,0 +1,129 @@
+<html lang="en">
+{% load static %}
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ecobags</title>
+
+    <!-- CSS  -->
+    <link rel="stylesheet" type="text/css" href="{% static 'libs/slick/slick.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'libs/slick/slick-theme.css' %}"/>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="{% static 'libs/material/css/materialize.min.css' %}" type="text/css" rel="stylesheet"
+          media="screen,projection">
+    <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection">
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+<div class="navbar-fixed">
+    <nav class="white" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="#" class="brand-logo"><img src="{% static 'images/index-logo.png' %}"
+                                                                    alt=""></a>
+            <ul class="right hide-on-med-and-down">
+{#                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Товари<i class="material-icons right">arrow_drop_down</i></a>#}
+{#                </li>#}
+                <li><a href="#">Товари</a></li>
+                <li><a href="#">Медiа</a></li>
+                <li><a href="#">Контакти</a></li>
+                <li>
+                    <form action="{% url 'new_search' %}" method="post">
+                        {% csrf_token %}
+                        <div class="input-field">
+                            <input id="search" type="search" required>
+                            <label class="label-icon" for="search"><i class="material-icons black-text">search</i></label>
+                            <i class="material-icons black-text">close</i>
+                        </div>
+                    </form>
+                </li>
+                <li><i class="material-icons" id="nav-item">shopping_cart</i></li>
+                <li><i class="material-icons" id="nav-item">person</i></li>
+                <li><i class="material-icons" id="nav-item">menu</i></li>
+            </ul>
+
+
+            <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content'>
+                <li><a href="#!">Каталог</a></li>
+                <li><a href="#!">Власний дизайн</a></li>
+                <li><a href="#!">Популярне</a></li>
+                <li class="divider" tabindex="-1"></li>
+                <li><a href="#!"><i class="material-icons">sms</i>Про товар</a></li>
+                <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+            </ul>
+            <ul id="nav-mobile" class="sidenav">
+                <li><a href="#">Сумки</a></li>
+                <li><a href="#">Медiа</a></li>
+                <li><a href="#">Контакти</a></li>
+            </ul>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+</div>
+
+{% block content %}
+{% endblock %}
+
+<footer class="page-footer teal">
+    <div class="container">
+        <div class="row">
+            <div class="col l3 s12">
+                <h5 class="white-text">Company Bio</h5>
+                <p class="grey-text text-lighten-4">We are a team of bla-bla we produce ecobags.</p>
+            </div>
+
+            <div class="col l3 s12">
+                <h5 class="white-text">Useful Links</h5>
+                <ul>
+                    <li><a class="white-text" href="#!">Link 1</a></li>
+                    <li><a class="white-text" href="#!">Link 2</a></li>
+                    <li><a class="white-text" href="#!">Link 3</a></li>
+                    <li><a class="white-text" href="#!">Link 4</a></li>
+                </ul>
+            </div>
+
+            <div class="input-field col l3 s12">
+                <h5 class="white-text">Subscribe</h5>
+                <form action="{% url 'subscribe' %}" method="post">
+                    {% csrf_token %}
+                    <div class="input-field">
+                        <input placeholder="johndoe@mail.net" name="sub" id="email-field" type="email"
+                               class="validate">
+                        <button class="btn waves-effect waves-light" type="submit">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="col l3 s12">
+                <h5 class="white-text">Contact Us</h5>
+                <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque
+                    id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut
+                    ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Made by <a class="brown-text text-lighten-3" href="http://ecobags-ua.net">Ecobags</a>
+        </div>
+    </div>
+</footer>
+
+
+<!--  Scripts-->
+<script src="{% static 'libs/jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'libs/material/js/materialize.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'libs/slick/slick.min.js' %}"></script>
+
+<script src="{% static 'js/init.js' %}"></script>
+
+<a id="button-to-top"></a>
+<div class="sidenav-overlay"></div>
+<div class="drag-target"></div>
+</body>
+</html>

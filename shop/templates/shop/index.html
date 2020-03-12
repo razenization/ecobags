@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+<html lang="en">
+<title>Some title</title>
+{% block head %}
+    <link href="{% static 'css/style-index.css' %}" type="text/css" rel="stylesheet" media="screen,projection">
+{% endblock %}
+<body>
+{% block content %}
+    <div id="index-banner">
+        <div class="section no-pad-bot">
+            <div class="slick-autoplay" id="slick-slider">
+                <div id="slide"><img src="{% static 'images/background1.jpg' %}" alt=""></div>
+                <div id="slide"><img src="{% static 'images/background2.jpg' %}" alt=""></div>
+                <div id="slide"><img src="{% static 'images/background3.jpg' %}" alt=""></div>
+            </div>
+        </div>
+        {#    <div class="parallax"><img src="{% static 'images/background1.jpg' %}" alt="Unsplashed background img 1"#}
+        {#                               style="transform: translate3d(-50%, 358.5142585551331px, 0px); opacity: 1;"></div>#}
+    </div>
+
+
+    <div class="container">
+        <div class="section">
+
+            <!--   Icon Section   -->
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <div class="about-holder">
+                            <img src="{% static 'images/small/bags.png' %}" class="about" alt="eco">
+                        </div>
+                        {#                    <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>#}
+                        <h5 class="center">Smart choice, fair price</h5>
+
+                        <p class="light">Smart, reusable alternatives to replace your everyday plastic shopping bags.
+                            Wide choice of eco-friendly bags. Colours, materials, styles.</p>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <div class="about-holder">
+                            <img src="{% static 'images/small/bag_create.png' %}" class="about" alt="eco">
+                        </div>
+                        {#                    <h2 class="center brown-text"><i class="material-icons">group</i></h2>#}
+                        <h5 class="center">Create your own bag</h5>
+
+                        <p class="light">We provide blank canvases to stamp your personal wantings on. Choose your own
+                            unique style today.</p>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <div class="about-holder">
+                            <img src="{% static 'images/small/eco_friendly.png' %}" class="about" alt="eco">
+                        </div>
+                        {#                    <h2 class="center brown-text"><i class="material-icons">settings</i></h2>#}
+                        <h5 class="center">Warranty of eco-friendliness</h5>
+
+                        <p class="light">We only work with audited factories that provide safe and hygienic
+                            working conditions.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <div class="row center">
+                    <h5 class="header col s12 light">Plain text of your own choice to be printed for user. (Slogans,
+                        provocative ads, etc.)</h5>
+                </div>
+            </div>
+        </div>
+        <div class="parallax"><img src="{% static 'images/background2.jpg' %}" alt="Unsplashed background img 2"
+                                   style="opacity: 1; transform: translate3d(-50%, 295.3590630941065px, 0px);"></div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+
+            <div class="row">
+                <div class="col s12 center">
+                    <h3><i class="mdi-content-send brown-text"></i></h3>
+                    <h4>Our Clients Who Trust Us</h4>
+                    {#                    <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam#}
+                    {#                        scelerisque#}
+                    {#                        id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras#}
+                    {#                        ut#}
+                    {#                        ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem#}
+                    {#                        neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam,#}
+                    {#                        eu#}
+                    {#                        mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed#}
+                    {#                        ipsum#}
+                    {#                        ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante#}
+                    {#                        ipsum#}
+                    {#                        primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>#}
+                    <div class="slick-autoplay-sponsor" id="slick-sponsor-slider">
+                        <div><img src="{% static 'images/sponsor/jd.jpg' %}" alt=""></div>
+                        <div><img src="{% static 'images/sponsor/moet.jpg' %}" alt=""></div>
+                        <div><img src="{% static 'images/sponsor/jd.jpg' %}" alt=""></div>
+                        <div><img src="{% static 'images/sponsor/moet.jpg' %}" alt=""></div>
+                        <div><img src="{% static 'images/sponsor/jd.jpg' %}" alt=""></div>
+                        <div><img src="{% static 'images/sponsor/moet.jpg' %}" alt=""></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <div class="row center">
+                    <h5 class="header col s12 light">Plain text of your own choice to be printed for user. (Slogans,
+                        provocative ads, etc.)</h5>
+                </div>
+            </div>
+        </div>
+        <div class="parallax"><img src="{% static 'images/background3.jpg' %}" alt="Unsplashed background img 3"
+                                   style="opacity: 1; transform: translate3d(-50%, 424.8326520745429px, 0px);"></div>
+    </div>
+{% endblock %}
+
+<!--  Scripts-->
+<script src="{% static 'libs/jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'libs/material/js/materialize.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'libs/slick/slick.min.js' %}"></script>
+
+<script src="{% static 'js/init.js' %}"></script>
+</body>
+</html>

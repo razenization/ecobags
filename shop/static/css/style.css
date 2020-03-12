@@ -1,0 +1,80 @@
+nav .brand-logo img{
+    height: 100%;
+}
+
+nav ul a {
+    color: #444;
+}
+
+nav .brand-logo {
+    height: 100%;
+}
+
+.sidenav-trigger {
+    color: #26a69a;
+}
+
+@media only screen and (max-width: 992px) {
+    .parallax-container .section {
+        position: absolute;
+        top: 40%;
+    }
+
+    #index-banner .section {
+        top: 10%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #index-banner .section {
+        top: 0;
+    }
+}
+
+footer.page-footer {
+    margin: 0;
+}
+
+#button-to-top {
+    display: inline-block;
+    background-color: #00A69A;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    margin: 30px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s;
+    z-index: 1000;
+}
+
+#button-to-top:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+#button-to-top:active {
+    background-color: #555;
+}
+
+#button-to-top::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#nav-item {
+    padding-left: 20px;
+    color: #444;
+    cursor: pointer;
+}
+
+ul#dropdown1 a {
+    text-align: center;
+}
