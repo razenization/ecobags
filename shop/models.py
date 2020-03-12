@@ -3,6 +3,19 @@ from django.db import models
 # Create your models here.
 
 
+class Goods(models.Model):
+    name = models.CharField(max_length=200)
+    type = models.CharField(max_length=100, null=True)
+
+    appear_date = models.DateTimeField()
+
+    def __str__(self):
+        return '{}'.format(self.name)
+
+    class Meta:
+        verbose_name_plural = 'Goods'
+
+
 class Search(models.Model):
     search = models.CharField(max_length=500, null=True)
     created = models.DateTimeField(auto_now=True)
@@ -27,7 +40,8 @@ class Sub(models.Model):
 
 class EcoBag(models.Model):
     price = models.IntegerField(default=0)
-    has_lock = models.BooleanField
+    has_lock = models.BooleanField(default=False)
+    image = models.ImageField(default=None)
 
 
 class BoxBag(models.Model):

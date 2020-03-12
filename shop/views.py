@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from shop import models
+from shop.models import Goods, EcoBag
 
 
 def index(request):
@@ -60,3 +61,14 @@ def sub(request):
     }
 
     return render(request, 'shop/subscribe.html', stuff_for_frontend)
+
+
+def goods(request):
+    goods_list = EcoBag.objects.all()
+
+    stuff_for_frontend = {
+        'goods': goods_list,
+        # 'final_postings': final_postings,
+    }
+
+    return render(request, 'shop/products.html', stuff_for_frontend)
