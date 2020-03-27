@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+<html lang="en">
+<title>Some title</title>
+<body>
+{% block content %}
+    <div class="product-type">
+    <ol>
+        <li><img class="type-img" src="{% get_media_prefix %}eco-bag.jpg" style="cursor: pointer;" onclick="document.location.href = 'ecobags';"><span>Экосумки</span></li>
+        <li><img class="type-img" src="{% get_media_prefix %}eco-bag.jpg"><span>Еще какие-то товары</span></li>
+        <li><img class="type-img" src="{% get_media_prefix %}eco-bag.jpg"><span>Еще какие-то товары</span></li>
+    </ol>
+{#        <div class="pic-wrapper">#}
+{#            <img src="{% get_media_prefix %}eco-bag.jpg">#}
+{#        </div>#}
+{#        <div class="pic-wrapper">#}
+{#            <img src="{% get_media_prefix %}eco-bag.jpg">#}
+{#        </div>#}
+    </div>
+{#{% for product in goods %}#}
+{#    <div>#}
+{#        <img src="{{ product.image.url }}">#}
+{#        <span>{{ product.price }}</span>#}
+{#    </div>#}
+{#{% endfor %}#}
+{% endblock %}
+
+
+<!--  Scripts-->
+<script src="{% static 'libs/jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'libs/material/js/materialize.js' %}"></script>
+
+<!--<script src="{% static 'js/init.js' %}"></script>-->
+
+</body>
+</html>
