@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-{% extends 'base.html' %}
+{% extends 'shop/v1/base.html' %}
 {% load static %}
 <html lang="en">
 <title>Some title</title>
 {% block head %}
-    <link href="{% static 'css/style-index.css' %}" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="{% static 'v1/css/style-index.css' %}" type="text/css" rel="stylesheet" media="screen,projection">
 {% endblock %}
 <body>
 {% block content %}
     <div id="index-banner">
         <div class="section no-pad-bot">
             <div class="slick-autoplay" id="slick-slider">
-                <div id="slide"><img src="{% static 'images/background1.jpg' %}" alt=""></div>
-                <div id="slide"><img src="{% static 'images/background2.jpg' %}" alt=""></div>
-                <div id="slide"><img src="{% static 'images/background3.jpg' %}" alt=""></div>
+                <div id="slide"><img src="{% static 'v1/images/background1.jpg' %}" alt=""></div>
+                <div id="slide"><img src="{% static 'v1/images/background2.jpg' %}" alt=""></div>
+                <div id="slide"><img src="{% static 'v1/images/background3.jpg' %}" alt=""></div>
             </div>
         </div>
         {#    <div class="parallax"><img src="{% static 'images/background1.jpg' %}" alt="Unsplashed background img 1"#}
@@ -29,7 +29,7 @@
                 <div class="col s12 m4">
                     <div class="icon-block">
                         <div class="about-holder">
-                            <img src="{% static 'images/small/bags.png' %}" class="about" alt="eco">
+                            <img src="{% static 'v1/images/small/bags.png' %}" class="about" alt="eco">
                         </div>
                         {#                    <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>#}
                         <h5 class="center">Smart choice, fair price</h5>
@@ -42,7 +42,7 @@
                 <div class="col s12 m4">
                     <div class="icon-block">
                         <div class="about-holder">
-                            <img src="{% static 'images/small/bag_create.png' %}" class="about" alt="eco">
+                            <img src="{% static 'v1/images/small/bag_create.png' %}" class="about" alt="eco">
                         </div>
                         {#                    <h2 class="center brown-text"><i class="material-icons">group</i></h2>#}
                         <h5 class="center">Create your own bag</h5>
@@ -55,7 +55,7 @@
                 <div class="col s12 m4">
                     <div class="icon-block">
                         <div class="about-holder">
-                            <img src="{% static 'images/small/eco_friendly.png' %}" class="about" alt="eco">
+                            <img src="{% static 'v1/images/small/eco_friendly.png' %}" class="about" alt="eco">
                         </div>
                         {#                    <h2 class="center brown-text"><i class="material-icons">settings</i></h2>#}
                         <h5 class="center">Warranty of eco-friendliness</h5>
@@ -79,7 +79,7 @@
                 </div>
             </div>
         </div>
-        <div class="parallax"><img src="{% static 'images/background2.jpg' %}" alt="Unsplashed background img 2"
+        <div class="parallax"><img src="{% static 'v1/images/background2.jpg' %}" alt="Unsplashed background img 2"
                                    style="opacity: 1; transform: translate3d(-50%, 295.3590630941065px, 0px);"></div>
     </div>
 
@@ -103,12 +103,12 @@
                     {#                        ipsum#}
                     {#                        primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>#}
                     <div class="slick-autoplay-sponsor" id="slick-sponsor-slider">
-                        <div><img src="{% static 'images/sponsor/jd.jpg' %}" alt=""></div>
-                        <div><img src="{% static 'images/sponsor/moet.jpg' %}" alt=""></div>
-                        <div><img src="{% static 'images/sponsor/jd.jpg' %}" alt=""></div>
-                        <div><img src="{% static 'images/sponsor/moet.jpg' %}" alt=""></div>
-                        <div><img src="{% static 'images/sponsor/jd.jpg' %}" alt=""></div>
-                        <div><img src="{% static 'images/sponsor/moet.jpg' %}" alt=""></div>
+                        <div><img src="{% static 'v1/images/sponsor/jd.jpg' %}" alt=""></div>
+                        <div><img src="{% static 'v1/images/sponsor/moet.jpg' %}" alt=""></div>
+                        <div><img src="{% static 'v1/images/sponsor/jd.jpg' %}" alt=""></div>
+                        <div><img src="{% static 'v1/images/sponsor/moet.jpg' %}" alt=""></div>
+                        <div><img src="{% static 'v1/images/sponsor/jd.jpg' %}" alt=""></div>
+                        <div><img src="{% static 'v1/images/sponsor/moet.jpg' %}" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -126,17 +126,17 @@
                 </div>
             </div>
         </div>
-        <div class="parallax"><img src="{% static 'images/background3.jpg' %}" alt="Unsplashed background img 3"
+        <div class="parallax"><img src="{% static 'v1/images/background3.jpg' %}" alt="Unsplashed background img 3"
                                    style="opacity: 1; transform: translate3d(-50%, 424.8326520745429px, 0px);"></div>
     </div>
 {% endblock %}
 
 <!--  Scripts-->
-<script src="{% static 'libs/jquery-3.4.1.min.js' %}"></script>
-<script src="{% static 'libs/material/js/materialize.js' %}"></script>
+<script src="{% static 'v1/libs/jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'v1/libs/material/js/materialize.js' %}"></script>
 
-<script type="text/javascript" src="{% static 'libs/slick/slick.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'v1/libs/slick/slick.min.js' %}"></script>
 
-<script src="{% static 'js/init.js' %}"></script>
+<script src="{% static 'v1/js/init.js' %}"></script>
 </body>
 </html>

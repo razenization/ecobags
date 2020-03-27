@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'shop/v1/base_shop.html' %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block leftbar %}
+    <div>
+        <ul>
+            <li class="btn active" onclick="filterSelection('all')"> Show all</li>
+            <li class="btn" onclick="filterSelection('cars')"> Cars</li>
+            <li class="btn" onclick="filterSelection('animals')"> Animals</li>
+            <li class="btn" onclick="filterSelection('fruits')"> Fruits</li>
+            <li class="btn" onclick="filterSelection('colors')"> Colors</li>
+        </ul>
+    </div>
+
+    <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+    <div class="container">
+        {% for bag in bags %}
+{#            <h2>{{ bag }}</h2>#}
+            <div class="filterDiv cars">
+                <img src="{{ bag.image.url }}">
+            </div>
+{#            <div class="filterDiv cars">BMW</div>#}
+{#            <div class="filterDiv colors fruits">Orange</div>#}
+{#            <div class="filterDiv cars">Volvo</div>#}
+{#            <div class="filterDiv colors">Red</div>#}
+{#            <div class="filterDiv cars animals">Mustang</div>#}
+{#            <div class="filterDiv colors">Blue</div>#}
+{#            <div class="filterDiv animals">Cat</div>#}
+{#            <div class="filterDiv animals">Dog</div>#}
+{#            <div class="filterDiv fruits">Melon</div>#}
+{#            <div class="filterDiv fruits animals">Kiwi</div>#}
+{#            <div class="filterDiv fruits">Banana</div>#}
+{#            <div class="filterDiv fruits">Lemon</div>#}
+{#            <div class="filterDiv animals">Cow</div>#}
+        {% endfor %}
+    </div>
+{% endblock %}
+</body>
+</html>

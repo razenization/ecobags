@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Roboto:100,300,400,500|Titillium+Web:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'v2/css/style.min.css' %}">
+    <link rel="stylesheet" href="{% static 'v2/other/slick/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'v2/other/slick/slick-theme.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Useful meta tags -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+
+    <!-- Favicons -->
+{#    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">#}
+{#    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">#}
+{#    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">#}
+{#    <link rel="manifest" href="assets/img/favicons/site.webmanifest">#}
+{#    <link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg" color="#5bbad5">#}
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Authorization</title>
+</head>
+<body>
+
+
+<!-- Header -->
+<header class="header">
+    <div class="container">
+
+        <div class="row  align-items-center">
+            <div class="col-lg-4">
+                <form class="search" action="/" method="post">
+                    <input class="search__input" type="text" placeholder="Search">
+                </form>
+            </div>
+
+            <div class="col-lg-4">
+                <img class="img  m-auto" src="{% static 'v2/img/index-logo.png' %}" alt="">
+            </div>
+
+            <div class="col-lg-4">
+                <div class="header__menu">
+                    <a class="header__menu-item" href="#">
+                        <img src="{% static 'v2/img/user.png' %}" alt="">
+                    </a>
+{#                    <a class="header__menu-item" href="#">#}
+{#                        <img src="{% static 'v2/img/cart.png' %}" alt="">#}
+{#                        <span class="header__menu-cart">3</span>#}
+{#                    </a>#}
+                    <a class="header__menu-item" href="#">
+                        <img src="{% static 'v2/img/burger.png' %}" alt="">
+                    </a>
+                </div>
+            </div>
+        </div><!-- /.row -->
+
+    </div><!-- /.container -->
+</header><!-- /.header -->
+
+<!-- Nav -->
+<div class="container">
+    <nav class="nav">
+        <a class="nav__link" href="{% url 'about' %}">Home</a>
+        <a class="nav__link" href="{% url 'shop' %}">Shop</a>
+        <a class="nav__link" href="{% url 'media' %}">Media</a>
+        <a class="nav__link  active" href="#">Calculator</a>
+    </nav>
+</div>
+
+{#{% if form.errors %}#}
+{#    <p>Your username and password didn't match. Please try again.</p>#}
+{#{% endif %}#}
+
+{#{% if next %}#}
+{#    {% if user.is_authenticated %}#}
+{#        <p>Your account doesn't have access to this page. To proceed,#}
+{#            please login with an account that has access.</p>#}
+{#    {% else %}#}
+{#        <p>Please login to see this page.</p>#}
+{#    {% endif %}#}
+{#{% endif %}#}
+<div class="container">
+        <div class="team">
+            <div class="team__title">
+                <h3>Login</h3>
+            </div>
+            <div class="form__contents">
+                <form method="post" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    <input class="login__input" type="email">
+                    <input class="pass__input" type="password">
+                    <input type="submit" value="login"/>
+                    <input type="hidden" name="next" value="{{ next }}"/>
+                </form>
+            </div> <!-- ./contents -->
+        </div> <!-- ./team -->
+    </div> <!-- ./container -->
+
+{#<form method="post" action="{% url 'login' %}">#}
+{#    {% csrf_token %}#}
+{#    <table>#}
+{##}
+{#        <tr>#}
+{#            <td>{{ form.username.label_tag }}</td>#}
+{#            <td>{{ form.username }}</td>#}
+{#        </tr>#}
+{##}
+{#        <tr>#}
+{#            <td>{{ form.password.label_tag }}</td>#}
+{#            <td>{{ form.password }}</td>#}
+{#        </tr>#}
+{#    </table>#}
+{##}
+{#    <input type="submit" value="login"/>#}
+{#    <input type="hidden" name="next" value="{{ next }}"/>#}
+{#</form>#}
+
+{# Assumes you setup the password_reset view in your URLconf #}
+{#<p><a href="{% url 'password_reset' %}">Lost password?</a></p>#}
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <img class="footer__logo" src="{% static 'v2/img/shopx-logo.png' %}" alt="">
+                    <div class="footer__contact-info">
+                        <a href="tel:+380999999999">+38 (099) 999 99 99</a>
+                        <p>г. Киев, ул. Рейтарская 0</p>
+                    </div>
+
+                    <div class="footer__work-time">
+                        <span>Режим работы:</span>
+                        <p>c 11:00 до 20:00 Пн-Сб</p>
+                        <p>с 11:00 до 18:00 Вс</p>
+                    </div>
+{#                    <div id="map-canvas" style="width: 300px; height: 200px;"></div>#}
+                </div>
+
+                <div class="col-lg-4">
+                    <h3 class="footer__title">Useful Links</h3>
+
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <a href="#">Our Brands</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#">Gift Vouchers</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#">Special Offers</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#">Our Brands</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#">Gift Vouchers</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#">Special Offers</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#">Our Brands</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#">Gift Vouchers</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a href="#">Special Offers</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4">
+                    <h3 class="footer__title">
+                        <img class="footer__title-icon" src="{% static 'v2/img/instagram-icon.png' %}" alt="">
+                        Instagram
+                    </h3>
+
+                    <ul class="instagram">
+                        <li class="instagram__item">
+                            <a href="#" target="_blank">
+                                <img class="img" src="https://placehold.it/86" alt="">
+                            </a>
+                        </li>
+                        <li class="instagram__item">
+                            <a href="#" target="_blank">
+                                <img class="img" src="https://placehold.it/86/333" alt="">
+                            </a>
+                        </li>
+                        <li class="instagram__item">
+                            <a href="#" target="_blank">
+                                <img class="img" src="https://placehold.it/86" alt="">
+                            </a>
+                        </li>
+                        <li class="instagram__item">
+                            <a href="#" target="_blank">
+                                <img class="img" src="https://placehold.it/86/333" alt="">
+                            </a>
+                        </li>
+                        <li class="instagram__item">
+                            <a href="#" target="_blank">
+                                <img class="img" src="https://placehold.it/86" alt="">
+                            </a>
+                        </li>
+                        <li class="instagram__item">
+                            <a href="#" target="_blank">
+                                <img class="img" src="https://placehold.it/86/333" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- /.row -->
+
+        </div><!-- /.container -->
+    </div><!-- /.footer__top -->
+
+    <div class="footer__bottom">
+        <div class="container">
+
+            <div class="row  align-items-center">
+                <div class="col-lg-6">
+                    <p>© 2002-2018 themexpert Inc. All rights reserved.</p>
+                </div>
+
+                <div class="col-lg-6">
+                    <img class="img ml-auto" src="{% static 'v2/img/payments.png' %}" alt="">
+                </div>
+            </div><!-- /.row -->
+
+        </div><!-- /.container -->
+    </div><!-- /.footer__bottom -->
+</footer>
+
+
+<!-- Scripts -->
+
+<script type="text/javascript" src="{% static 'v2/other/jquery-3.4.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'v2/other/slick/slick.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'v2/other/calc.js' %}"></script>
+<script type="text/javascript" src="{% static 'v2/other/component.js' %}"></script>
+<script type="text/javascript" src="{% static 'v2/other/js.cookie.js' %}"></script>
+<script type="text/javascript" src="{% static 'v2/other/cart.js' %}"></script>
+{#<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initializeMap"></script>#}
+<script type="text/javascript" src="{% static 'v2/other/init.js' %}"></script>
+
+<script>
+	var c1 = new cart('.calc', '.rightbar');
+</script>
+
+<!-- <script src="assets/js/app.js"></script> -->
+
+<a id="button-to-top" title="Go to top"></a>
+
+</body>
+</html>
+</title>
+</head>
+<body>
+
+</body>
+</html>

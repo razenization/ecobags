@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'shop/v1/base.html' %}
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% block head %}
+        <link rel="stylesheet" type="text/css" href="{% static 'v1/css/style-goods.css' %}"/>
+    {% endblock %}
+</head>
+<body>
+{% block leftbar %}
+{% endblock %}
+
+{% block display_items %}
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="{% static 'v1/js/init-goods.js' %}"></script>
+{% endblock %}
+</body>
+</html>
